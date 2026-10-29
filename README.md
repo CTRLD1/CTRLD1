@@ -1,17 +1,19 @@
 <p align="center">
-  <img src="./assets/neural-pulse-lattice.svg" alt="{{name}} — neural pulse lattice" width="100%" />
+  <a href="https://danah-alsubaie.pages.dev" target="_blank">
+    <img src="./assets/neural-pulse-lattice.svg" alt="Danah Alsubaie — Neural Pulse Lattice" width="100%" />
+  </a>
 </p>
 
 ### transmission
 
-{{transmission_paragraph}}
+Building resilient backend architectures, scalable APIs, and full-stack systems. Focused on clean system integration, containerized workflows, and performance optimization.
 
 ### nodes (currently active)
 
-- `n01` · {{node_one_label}} — {{node_one_text}}
-- `n02` · {{node_two_label}} — {{node_two_text}}
-- `n03` · {{node_three_label}} — {{node_three_text}}
+- `n01` · `Invoi` — Invoicing & financial tracking engine built with Laravel, PostgreSQL, and Docker.
+- `n02` · `Bayanuk` — High-performance backend services with rate-limiting, JWT authentication, and automated CI/CD pipelines.
+- `n03` · `danah-portfolio` — Personal developer portfolio deployed via Cloudflare Pages.
 
 ### endpoints
 
-[`{{website}}`]({{website_url}}) · [`@{{twitter}}`](https://twitter.com/{{twitter}}) · [`{{email}}`](mailto:{{email}})
+[`danah-alsubaie.pages.dev`](https://danah-alsubaie.pages.dev) · [`LinkedIn`](https://linkedin.com/in/danah-alsubaie2) · [`Email`](mailto:danah.alsubaie2@gmail.com)
