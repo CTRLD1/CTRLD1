@@ -170,7 +170,7 @@
     <line x1="840" y1="320" x2="1140" y2="320" stroke="#1a2a4a" stroke-width="0.6"/>
 
     <text x="840" y="344" font-size="10" letter-spacing="3" fill="#4fbcff">→ TRANSMIT</text>
-    <text x="840" y="362" font-size="11" fill="#a5b4cf">[`GitHub`](https://github.com/CTRLD1) · [`LinkedIn`](https://www.linkedin.com/in/danah-alsubaie2/) · [`Email`](mailto:danah.alsubaie2@gmail.com)</text>
+    <text x="840" y="362" font-size="11" fill="#a5b4cf">danah-alsubaie.pages.dev<</text>
   </g>
 
   <!-- Status pill -->
