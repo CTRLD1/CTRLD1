@@ -6,13 +6,12 @@
 
 ### transmission
 
-Building resilient backend architectures, scalable APIs, and full-stack systems. Focused on clean system integration, containerized workflows, and performance optimization.
+Software engineering intern building full-stack web applications and backend services. Experienced in end-to-end authentication modules, AI-powered invoice management workflows, and REST API design with Laravel and React.
 
 ### nodes (currently active)
 
-- `n01` · `Invoi` — Invoicing & financial tracking engine built with Laravel, PostgreSQL, and Docker.
-- `n02` · `Bayanuk` — High-performance backend services with rate-limiting, JWT authentication, and automated CI/CD pipelines.
-- `n03` · `danah-portfolio` — Personal developer portfolio deployed via Cloudflare Pages.
+- `n01` · `Invoi` — AI-powered invoice management dashboard featuring end-to-end auth, analytics, and n8n automation workflows.
+- `n02` · `Bayanuk` — AI job offer & employment contract reviewer powered by a Laravel backend and React frontend.
 
 ### endpoints
 
