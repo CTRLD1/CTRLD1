@@ -77,19 +77,12 @@
 <img src="./assets/divider.svg" alt="" width="500" />
 </div>
 
-<h3 align="center">🎮 BATTLE ME: CONNECT 4</h3>
+<h3 align="center">🎮 CATCH 'EM ALL</h3> <div align="center">
 
-<div align="center">
+Match the Pokémon in my memory game. How few moves can you do it in?
 
-Click a **column number** to drop your Poké Ball, then press **Submit new issue**.
-The board updates in about 30 seconds.
+<a href="https://ctrld1.github.io/CTRLD1/game.html"><img src="https://img.shields.io/badge/PLAY_NOW-EE1515?style=for-the-badge&logo=nintendo&logoColor=white" alt="Play the Pokémon memory game" /></a>
 
-<!-- CONNECT4 BOARD GOES HERE: paste the board, "Request a move" link, recent moves and leaderboard from the connect4 template once the game files are copied -->
+<br/> <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif" height="48" alt="Pikachu" />
 
-<br/>
-
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif" height="48" alt="Pikachu" />
-
-*Gotta commit 'em all.*
-
-</div>
+Gotta commit 'em all.
