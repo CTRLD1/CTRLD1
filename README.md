@@ -46,22 +46,31 @@
 
 <table align="center" width="500">
   <tr>
-    <td width="33%" align="center" valign="bottom">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/143.gif" height="64" alt="Bayanuk" /><br/>
+    <td width="33%" align="center" valign="top">
+      <div style="height: 70px; display: flex; align-items: center; justify-content: center;">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/143.gif" height="52" alt="Bayanuk" />
+      </div>
       <b>No. 001<br/>BAYANUK</b><br/>
-      <i>Laravel Backend</i><br/><sub>Laravel API · PostgreSQL<br/>Docker + Jenkins</sub><br/><br/>
+      <i>Laravel Backend</i><br/>
+      <sub>Laravel API · PostgreSQL<br/>Docker + Jenkins</sub><br/><br/>
       <a href="https://github.com/JxTechStudio-org/bayanuk"><img src="https://img.shields.io/badge/VIEW_PROJECT-0E0EEA?style=flat-square&logo=github&logoColor=white" alt="View Bayanuk" /></a>
     </td>
-    <td width="33%" align="center" valign="bottom">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/123.gif" height="64" alt="invoi" /><br/>
+    <td width="33%" align="center" valign="top">
+      <div style="height: 70px; display: flex; align-items: center; justify-content: center;">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/123.gif" height="52" alt="invoi" />
+      </div>
       <b>No. 002<br/>INVOI</b><br/>
-      <i>Full-Stack</i><br/><sub>React · Full Auth (JWT)<br/>Analytics & Detail UI</sub><br/><br/>
+      <i>Full-Stack</i><br/>
+      <sub>React · Full Auth (JWT)<br/>Analytics & Detail UI</sub><br/><br/>
       <a href="https://github.com/JxTechStudio-org/invoi"><img src="https://img.shields.io/badge/VIEW_PROJECT-0E0EEA?style=flat-square&logo=github&logoColor=white" alt="View invoi" /></a>
     </td>
-    <td width="33%" align="center" valign="bottom">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/52.gif" height="64" alt="Reachly" /><br/>
+    <td width="33%" align="center" valign="top">
+      <div style="height: 70px; display: flex; align-items: center; justify-content: center;">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/52.gif" height="52" alt="Reachly" />
+      </div>
       <b>No. 003<br/>REACHLY</b><br/>
-      <i>Full-Stack</i><br/><sub>React (Vite) + Tailwind<br/>Django REST · PostgreSQL</sub><br/><br/>
+      <i>Full-Stack</i><br/>
+      <sub>React (Vite) + Tailwind<br/>Django REST · PostgreSQL</sub><br/><br/>
       <a href="https://github.com/CTRLD1/reachly-frontend"><img src="https://img.shields.io/badge/VIEW_PROJECT-0E0EEA?style=flat-square&logo=github&logoColor=white" alt="View Reachly" /></a>
     </td>
   </tr>
