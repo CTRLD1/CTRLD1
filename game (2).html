@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catch 'em all | Danah Alsubaie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14162b; --panel: #1d2040; --yellow: #FFCB05; --red: #EE1515; --blue: #3B4CCA; --ink: #ffffff;
+    --font: "Press Start 2P", "Courier New", monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); font-family: var(--font); }
+  body { display: flex; flex-direction: column; align-items: center; padding: 20px 12px 40px; }
+  h1 { font-size: clamp(14px, 4vw, 22px); color: var(--yellow); margin: 8px 0 6px; text-align: center; line-height: 1.5; }
+  p.sub { font-size: 10px; color: #8fb0ff; margin: 0 0 18px; text-align: center; line-height: 1.8; }
+  .hud { display: flex; gap: 10px; width: min(92vw, 460px); justify-content: space-between; align-items: center;
+         font-size: 10px; margin-bottom: 14px; }
+  .hud span { background: var(--panel); border: 3px solid var(--blue); padding: 8px 10px; }
+  button.reset { font-family: var(--font); font-size: 10px; background: var(--red); color: #fff; border: 3px solid #111;
+         padding: 9px 12px; cursor: pointer; }
+  button.reset:hover { background: #ff3a3a; }
+  .board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; width: min(92vw, 460px); }
+  .card { aspect-ratio: 1; padding: 0; border: 0; background: none; perspective: 600px; cursor: pointer; }
+  .inner { position: relative; width: 100%; height: 100%; transition: transform .35s; transform-style: preserve-3d; }
+  .card.open .inner, .card.done .inner { transform: rotateY(180deg); }
+  .face { position: absolute; inset: 0; backface-visibility: hidden; border: 4px solid #111; border-radius: 12px;
+          display: flex; align-items: center; justify-content: center; }
+  .back { background: linear-gradient(var(--red) 0 44%, #111 44% 56%, #f4f4f4 56%); }
+  .back::after { content: ""; width: 34%; aspect-ratio: 1; border-radius: 50%; background: #f4f4f4; border: 4px solid #111; }
+  .front { background: var(--panel); transform: rotateY(180deg); border-color: var(--yellow); }
+  .front img { width: 82%; image-rendering: pixelated; }
+  .card.done .front { border-color: #3ddc84; background: #17332a; }
+  .card:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 12px; }
+  .win { margin-top: 20px; width: min(92vw, 460px); background: var(--panel); border: 4px solid var(--yellow);
+         padding: 16px; font-size: 11px; line-height: 1.9; text-align: center; display: none; }
+  .win.show { display: block; }
+  .win b { color: var(--yellow); }
+  a.back-link { margin-top: 24px; font-size: 10px; color: #8fb0ff; }
+  @media (prefers-reduced-motion: reduce) { .inner { transition: none; } }
+</style>
+</head>
+<body>
+  <h1>Catch 'em all!</h1>
+  <p class="sub">Flip two Poké Balls and match the Pokémon.</p>
+
+  <div class="hud">
+    <span id="moves">Moves: 0</span>
+    <span id="best">Best: -</span>
+    <button class="reset" id="reset" type="button">New game</button>
+  </div>
+
+  <div class="board" id="board" aria-label="Memory game board"></div>
+
+  <div class="win" id="win" role="status"></div>
+
+  <a class="back-link" href="https://danah-alsubaie.pages.dev/">Back to Danah's portfolio</a>
+
+<script>
+  var IDS = [25, 1, 4, 7, 133, 39, 94, 143];
+  var NAMES = {25:"Pikachu",1:"Bulbasaur",4:"Charmander",7:"Squirtle",133:"Eevee",39:"Jigglypuff",94:"Gengar",143:"Snorlax"};
+  var SPRITE = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
+  var board = document.getElementById("board");
+  var movesEl = document.getElementById("moves");
+  var bestEl = document.getElementById("best");
+  var winEl = document.getElementById("win");
+  var first = null, lock = false, moves = 0, matched = 0, best = null;
+
+  try { best = parseInt(localStorage.getItem("pokemon-memory-best"), 10) || null; } catch (e) {}
+  if (best) bestEl.textContent = "Best: " + best;
+
+  function shuffle(a) {
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function start() {
+    board.innerHTML = ""; winEl.className = "win"; winEl.textContent = "";
+    first = null; lock = false; moves = 0; matched = 0;
+    movesEl.textContent = "Moves: 0";
+    shuffle(IDS.concat(IDS)).forEach(function (id) {
+      var c = document.createElement("button");
+      c.type = "button"; c.className = "card"; c.dataset.id = id;
+      c.setAttribute("aria-label", "Hidden card");
+      c.innerHTML = '<div class="inner"><div class="face back"></div><div class="face front"><img alt="' +
+        NAMES[id] + '" src="' + SPRITE + id + '.png"></div></div>';
+      c.addEventListener("click", function () { flip(c); });
+      board.appendChild(c);
+    });
+  }
+
+  function flip(c) {
+    if (lock || c.classList.contains("open") || c.classList.contains("done")) return;
+    c.classList.add("open");
+    if (!first) { first = c; return; }
+    moves++; movesEl.textContent = "Moves: " + moves;
+    if (first.dataset.id === c.dataset.id) {
+      first.classList.replace("open", "done"); c.classList.replace("open", "done");
+      first = null; matched++;
+      if (matched === IDS.length) finish();
+    } else {
+      lock = true;
+      var a = first; first = null;
+      setTimeout(function () { a.classList.remove("open"); c.classList.remove("open"); lock = false; }, 800);
+    }
+  }
+
+  function finish() {
+    var record = !best || moves < best;
+    if (record) {
+      best = moves; bestEl.textContent = "Best: " + best;
+      try { localStorage.setItem("pokemon-memory-best", String(best)); } catch (e) {}
+    }
+    winEl.innerHTML = "Gotcha! You caught all 8 Pokémon in <b>" + moves + "</b> moves." + (record ? "<br>New best score!" : "");
+    winEl.className = "win show";
+  }
+
+  document.getElementById("reset").addEventListener("click", start);
+  start();
+</script>
+</body>
+</html>
