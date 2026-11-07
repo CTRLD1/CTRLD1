@@ -19,16 +19,12 @@
 </div>
 
 <div align="center">
-<img src="./assets/intro.svg" alt="A wild Danah appeared! Khobar, Saudi Arabia. Intern at JX Tech Studio" width="500" />
-</div>
-
 
 <div align="center">
 
-<a href="https://danah-alsubaie.pages.dev/"><img src="https://img.shields.io/badge/ENTER_MY_PORTFOLIO-EE1515?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
-<a href="https://www.linkedin.com/in/danah-alsubaie2"><img src="https://img.shields.io/badge/LINKEDIN-3B4CCA?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="mailto:danah.alsubaie2@gmail.com"><img src="https://img.shields.io/badge/EMAIL-FFCB05?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" /></a>
-
+<a href="https://danah-alsubaie.pages.dev/"><img src="./assets/btn-portfolio.svg" alt="Portfolio" width="150" /></a>
+<a href="https://www.linkedin.com/in/danah-alsubaie2"><img src="./assets/btn-linkedin.svg" alt="LinkedIn" width="150" /></a>
+<a href="mailto:danah.alsubaie2@gmail.com"><img src="./assets/btn-email.svg" alt="Email" width="150" /></a>
 
 </div>
 
@@ -54,24 +50,25 @@
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/143.gif" height="64" alt="Bayanuk" /><br/>
       <b>No. 001<br/>BAYANUK</b><br/>
       <i>Laravel Backend</i><br/><sub>Laravel API · PostgreSQL · Docker + Jenkins</sub><br/><br/>
-      <a href="REPLACE_WITH_BAYANUK_LINK"><img src="https://img.shields.io/badge/VIEW_PROJECT-EE1515?style=flat-square&logo=github&logoColor=white" alt="View Bayanuk" /></a>
+      <a href="https://github.com/JxTechStudio-org/bayanuk"><img src="https://img.shields.io/badge/VIEW_PROJECT-0E0EEA?style=flat-square&logo=github&logoColor=white" alt="View Bayanuk" /></a>
     </td>
     <td width="33%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/52.gif" height="64" alt="invoi" /><br/>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/123.gif" height="64" alt="invoi" /><br/>
       <b>No. 002<br/>INVOI</b><br/>
-      <i>Full-Stack</i><br/><sub>Analytics page, frontend to backend</sub><br/><br/>
-      <a href="REPLACE_WITH_INVOI_LINK"><img src="https://img.shields.io/badge/VIEW_PROJECT-EE1515?style=flat-square&logo=github&logoColor=white" alt="View invoi" /></a>
+      <i>Full-Stack</i><br/><sub>React · Full Auth (JWT) ·
+Landing, Analytics & Detail UI</sub><br/><br/>
+      <a href="https://github.com/JxTechStudio-org/invoi"><img src="https://img.shields.io/badge/VIEW_PROJECT-0E0EEA?style=flat-square&logo=github&logoColor=white" alt="View invoi" /></a>
     </td>
     <td width="33%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/16.gif" height="64" alt="Reachly" /><br/>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/52.gif" height="64" alt="Reachly" /><br/>
       <b>No. 003<br/>REACHLY</b><br/>
-      <i>Project</i><br/><br/>
-      <a href="REPLACE_WITH_REACHLY_LINK"><img src="https://img.shields.io/badge/VIEW_PROJECT-EE1515?style=flat-square&logo=github&logoColor=white" alt="View Reachly" /></a>
+      <i>Full-Stack</i><br/><sub>React (Vite) + Tailwind
+Django REST · PostgreSQL</sub><br/><br/>
+      <a href="https://github.com/CTRLD1/reachly-frontend"><img src="https://img.shields.io/badge/VIEW_PROJECT-0E0EEA?style=flat-square&logo=github&logoColor=white" alt="View Reachly" /></a>
     </td>
   </tr>
 </table>
 
-<!-- Link each project to its repo once public, for example: https://github.com/CTRLD1/REPO_NAME -->
 
 <div align="center">
 <img src="./assets/divider.svg" alt="" width="500" />
